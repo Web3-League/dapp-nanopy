@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge'
 import Header from '@/components/Header'
 import { NETWORKS, getNetwork, createClient, DEX_ABI } from '@/lib/config'
 
-type NetworkType = 'mainnet' | 'testnet'
+type NetworkType = 'mainnet' | 'testnet' | 'turbo' | 'turbo-testnet'
 
 export default function SwapPage() {
   const [account, setAccount] = useState<string | null>(null)
@@ -101,8 +101,8 @@ export default function SwapPage() {
       }
 
       // Listen for chain changes
-      window.ethereum.on('chainChanged', (chainId: string) => {
-        const newNetwork = getNetwork(chainId)
+      window.ethereum.on('chainChanged', (chainId: unknown) => {
+        const newNetwork = getNetwork(chainId as string)
         setNetwork(newNetwork)
       })
     }
