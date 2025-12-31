@@ -273,8 +273,8 @@ export default function OraclePage() {
         setBalance(formatEther(bal))
       }
 
-      window.ethereum.on('chainChanged', (chainId: string) => {
-        setNetwork(getNetwork(chainId))
+      window.ethereum.on('chainChanged', (chainId: unknown) => {
+        setNetwork(getNetwork(chainId as string))
       })
     }
     init()
