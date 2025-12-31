@@ -54,7 +54,7 @@ export const nanopy = nanopyMainnet
 export type NetworkType = 'mainnet' | 'testnet' | 'turbo' | 'turbo-testnet'
 
 export interface NetworkConfig {
-  chain: typeof nanopyMainnet
+  chain: ReturnType<typeof defineChain>
   chainIdHex: string
   isL2: boolean
   l1Network?: NetworkType
