@@ -190,6 +190,7 @@ export default function NFTPage() {
         args: [mintUri],
         value: parseEther(mintFee),
         account: account as `0x${string}`,
+        chain: networkConfig.chain,
       })
 
       alert(`Minting... TX: ${hash}`)
@@ -222,6 +223,7 @@ export default function NFTPage() {
         args: [BigInt(tokenId)],
         value: price,
         account: account as `0x${string}`,
+        chain: networkConfig.chain,
       })
 
       alert(`Buying... TX: ${hash}`)
