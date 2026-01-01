@@ -130,7 +130,7 @@ export default function LandingPage() {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">RPC URL</span>
-                  <code className="text-xs">http://51.68.125.99:8546</code>
+                  <code className="text-xs">https://rpc.nanopy.eu</code>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Chain ID</span>
@@ -158,7 +158,7 @@ export default function LandingPage() {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">RPC URL</span>
-                  <code className="text-xs">http://51.68.125.99:8548</code>
+                  <code className="text-xs">https://l2.nanopy.eu</code>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Chain ID</span>
@@ -175,6 +175,16 @@ export default function LandingPage() {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Tools */}
+        <div className="flex justify-center gap-4 mt-8">
+          <Link href="https://faucet.nanopy.eu" target="_blank">
+            <Button variant="outline">Faucet</Button>
+          </Link>
+          <Link href="https://scan.nanopy.eu" target="_blank">
+            <Button variant="outline">Explorer</Button>
+          </Link>
         </div>
       </section>
 
