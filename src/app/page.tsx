@@ -20,6 +20,12 @@ export default function LandingPage() {
           <Link href="#networks" className="text-muted-foreground hover:text-foreground">
             Networks
           </Link>
+          <Link href="https://faucet.nanopy.eu" target="_blank" className="text-muted-foreground hover:text-foreground">
+            Faucet
+          </Link>
+          <Link href="https://scan.nanopy.eu" target="_blank" className="text-muted-foreground hover:text-foreground">
+            Explorer
+          </Link>
           <Link href="/WHITEPAPER.pdf" className="text-muted-foreground hover:text-foreground">
             Whitepaper
           </Link>
