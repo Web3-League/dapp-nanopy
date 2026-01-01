@@ -26,6 +26,9 @@ export default function LandingPage() {
           <Link href="https://scan.nanopy.eu" target="_blank" className="text-muted-foreground hover:text-foreground">
             Explorer
           </Link>
+          <Link href="https://discord.gg/UbTxf25Z9F" target="_blank" className="text-muted-foreground hover:text-foreground">
+            Discord
+          </Link>
           <Link href="/WHITEPAPER.pdf" className="text-muted-foreground hover:text-foreground">
             Whitepaper
           </Link>
@@ -241,6 +244,9 @@ export default function LandingPage() {
             <div className="flex gap-6 text-sm">
               <Link href="https://pypi.org/project/nanopy-chain/" target="_blank" className="text-muted-foreground hover:text-foreground">
                 PyPI
+              </Link>
+              <Link href="https://discord.gg/UbTxf25Z9F" target="_blank" className="text-muted-foreground hover:text-foreground">
+                Discord
               </Link>
               <Link href="/WHITEPAPER.pdf" className="text-muted-foreground hover:text-foreground">
                 Whitepaper
