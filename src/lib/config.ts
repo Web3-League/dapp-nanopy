@@ -1,8 +1,9 @@
 import { createPublicClient, http, defineChain } from 'viem'
 
 // ============= Environment-based configuration =============
-// RPC host can be overridden via environment variable
-const RPC_HOST = process.env.NEXT_PUBLIC_RPC_HOST || '51.68.125.99'
+// RPC URLs - use HTTPS domains in production, HTTP locally
+const L1_RPC_URL = process.env.NEXT_PUBLIC_L1_RPC_URL || 'https://rpc.nanopy.eu'
+const L2_RPC_URL = process.env.NEXT_PUBLIC_L2_RPC_URL || 'https://l2.nanopy.eu'
 
 // ============= Chain definitions =============
 
@@ -12,7 +13,7 @@ export const nanopyMainnet = defineChain({
   name: 'NanoPy',
   nativeCurrency: { name: 'NanoPy', symbol: 'NPY', decimals: 18 },
   rpcUrls: {
-    default: { http: [`http://${RPC_HOST}:8545`] },
+    default: { http: [L1_RPC_URL] },
   },
 })
 
@@ -22,7 +23,7 @@ export const nanopyTestnet = defineChain({
   name: 'Pyralis Testnet',
   nativeCurrency: { name: 'NanoPy', symbol: 'NPY', decimals: 18 },
   rpcUrls: {
-    default: { http: [`http://${RPC_HOST}:8546`] },
+    default: { http: [L1_RPC_URL] },
   },
 })
 
@@ -32,7 +33,7 @@ export const nanopyTurbo = defineChain({
   name: 'NanoPy Turbo',
   nativeCurrency: { name: 'NanoPy', symbol: 'NPY', decimals: 18 },
   rpcUrls: {
-    default: { http: [`http://${RPC_HOST}:8547`] },
+    default: { http: [L2_RPC_URL] },
   },
 })
 
@@ -42,7 +43,7 @@ export const nanopyTurboTestnet = defineChain({
   name: 'NanoPy Turbo Testnet',
   nativeCurrency: { name: 'NanoPy', symbol: 'NPY', decimals: 18 },
   rpcUrls: {
-    default: { http: [`http://${RPC_HOST}:8548`] },
+    default: { http: [L2_RPC_URL] },
   },
 })
 
