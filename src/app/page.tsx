@@ -181,12 +181,12 @@ export default function LandingPage() {
         <div className="flex justify-center gap-4 mt-8">
           <Link href="https://faucet.nanopy.eu" target="_blank">
             <Button size="lg" className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600">
-              🚰 Get Test Tokens
+              Get Test Tokens
             </Button>
           </Link>
           <Link href="https://scan.nanopy.eu" target="_blank">
             <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
-              🔍 Block Explorer
+              Block Explorer
             </Button>
           </Link>
         </div>
